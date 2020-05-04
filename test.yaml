@@ -1,7 +1,7 @@
 ---
 - hosts: all
   gather_facts: no
-  var_files:
+  vars_files:
      - credential.yaml
   tasks:
      - name: file create
