@@ -1,6 +1,9 @@
 ---
 - hosts: all
   gather_facts: no
+  var_files:
+     - credential.yaml
   tasks:
      - name: file create
        command: touch /tmp/prapulla.txt
+     - debug: msg="my secure variable '{{ tenant_cred }}'"
